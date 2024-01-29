@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon startFromScratch="true">
+    <contextualTabs>
+      <tabSet idMso="TabSetDrawingTools" visible="false">
+        <tab insertBeforeMso="TabSetDrawingTools">
+          <group id="test1" visible="true" label="AddIn">
+            <button idMso="FindDialog" size="large" label="test"></button>
+          </group>
+        </tab>
+      </tabSet>
+    </contextualTabs>
+    <qat>
+      <documentControls>
+      </documentControls>
+    </qat>
+    <!-- Group/button要素には必ずIDを割り振ること -->
+    <tabs>
+      <tab idMso="TabHome" visible="false" label="テスト">
+        <group idMso="GroupClipboard" visible="false"></group>
+        <group id="NewGroup" label="TEST" visible="true"></group>
+      </tab>
+      <tab idMso="TabAddIns" visible="true">
+        <group id="config1">
+          <button idMso="FileOpenUsingBackstage" label="開く" size="large"/>
+          <button idMso="WindowsArrangeAll" label="最大化" size="large"/>
+          <gallery idMso="Undo" label="戻す" size="large"/>
+          <button idMso="FindDialog" label="検索" size="large"/>
+          <button id="showKeyboard" label="キーボード表示" size="large" onAction="ShowKeyboard"/>
+			<button id="SaveMap" label="マップ保存" size="large" onAction="SaveMap"/>
+        </group>
+        <group id="space1" label="_______________________属性リスト_________________________">
+        </group>
+        <group id="group1" label="時間関係">
+          <separator/>
+          <button id="kigen" label="起源" onAction="SelectAttribute"  showImage="false"  size="large"/>
+          <separator/>
+          <button id="hensen" label="変遷" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+        </group>
+        <group id="group2" label="因果関係">
+          <button id="haikei" label="背景" onAction="SelectAttribute"  showImage="false"  size="large"/>
+          <separator/>
+          <button id="mondai" label="問題" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="kaiketsu" label="解決" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="gennin" label="原因" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+        </group>
+        <group id="group3" label="論理関係">
+          <button id="gennri" label="原理" onAction="SelectAttribute"  showImage="false"  size="large"/>
+          <button id="dounyu" label="導入" onAction="SelectAttribute"  showImage="false"  size="large"/>
+          <button id="ketsuron" label="結論" onAction="SelectAttribute"  showImage="false"  size="large"/>
+          <separator/>
+        </group>
+        <group id="group4" label="全体部分関係" >
+          <button id="kousei" label="構成" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="kouzou" label="構造" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="tejunn" label="手順" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="tokutyou" label="特徴" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="jirei" label="事例" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+        </group>
+        <group id="group5" label="比較関係" >
+          <button id="taihi" label="対比" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+        </group>
+        <group id="group6" label="階層関係" >
+          <button id="class" label="クラス" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="instance" label="インスタンス" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="syurui" label="種類" onAction="SelectAttribute" showImage="false"  size="large"/>
+        </group>
+        <group id="group7" label="その他">
+          <button id="mokuteki" label="目的" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+          <button id="taisyou" label="対象" onAction="SelectAttribute" showImage="false"  size="large"/>
+          <separator/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+  <backstage>
+    <button id="backstage1" label="あきらめんなよ"/>
+  </backstage>
+  <contextMenus>
+    <contextMenu idMso="MiniBarTextEdit">
+      <button id="mini1" label="1"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuObjectEditPoint">
+      <button id="c-menu1" label="111"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuObjectEditSegment">
+      <button id="c-menu6" label="116"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuFrame">
+      <button id="c-menu2" label="112"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuTextEdit">
+      <button id="c-menu3" label="113"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSpell">
+      <button id="c-menu4" label="114"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuLabelSection">
+      <button id="c-menu5" label="115"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuCurve">
+      <button id="c7" label="117"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuDrawnObject">
+      <button id="c8" label="118"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuMotionPath">
+      <button id="c9" label="119"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuPathPoint">
+      <button id="c10" label="120"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuPathSegment">
+      <button id="c11" label="121"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuShape">
+      <button id="c12" label="122"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuInk">
+      <button id="c13" label="123"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuObjectsGroup">
+      <button id="c14" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuOfficePreviewHandlerPowerPoint">
+      <button id="c15" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuRevision">
+      <button id="c16" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuPodiumMonitorSettings">
+      <button id="c17" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuRightDragDrop">
+      <button id="c18" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSlideShow">
+      <button id="c19" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuShowHyperlink">
+      <button id="c20" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuShowPointerOptions">
+      <button id="c21" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSlideGap">
+      <button id="c22" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSlideGap">
+      <button id="c23" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuPicture">
+      <button id="c24" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSlideSorter">
+      <button id="c25" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuNotesEditText">
+      <button id="c26" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuGuide">
+      <button id="c27" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuGraphicOleClassic">
+      <button id="c28" label="124"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSmartArtEditText">
+      <button id="c29" label="124"/>
+    </contextMenu>
+    <contextMenu idMso=" ContextMenuSmartArtEdit1DShape">
+      <button id="c30" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSmartArtEditSmartArt">
+      <button id="c31" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSmartArtContentPane">
+      <button id="c32" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuOfficeWebExtension">
+      <button id="c33" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSmartArtEdit1DShapeText">
+      <button id="c34" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuShowBrowse">
+      <button id="c35" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuEndShow">
+      <button id="c36" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSlideSync">
+      <button id="c37" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuChartArea">
+      <button id="c38" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuGraphicsCompatibility">
+      <button id="c39" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuTable">
+      <button id="c40" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuTextEditOutline">
+      <button id="c41" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="ContextMenuSmartArtBackground">
+      <button id="c42" label="125"/>
+    </contextMenu>
+    <contextMenu idMso="PasteGalleryMini">
+      <button id="c43" label="125"/>
+    </contextMenu>
+
+	  <contextMenu idMso="ContextMenuTextEdit">
+		  <button id ="Button2" label="マーク付け" insertBeforeMso="Cut" onAction="GetButtonID"/>
+		  <control idMso="FirstCorrectionAlternative" visible="false"/>
+		  <control idMso="SecondCorrectionAlternative" visible="false"/>
+		  <control idMso="ThirdCorrectionAlternative" visible="false"/>
+		  <control idMso="FourthCorrectionAlternative" visible="false"/>
+		  <control idMso="MoreCorrectionAlternatives" visible="false"/>
+		  <control idMso="Cut" visible="false"/>
+		  <control idMso="Copy" visible="false"/>
+		  <control idMso="PasteGalleryMini" visible="false"/>
+		  <control idMso="EquationOptionsGallery" visible="false"/>
+		  <control idMso="TextEditModeExit" visible="false"/>
+		  <control idMso="FontDialog" visible="false"/>
+		  <control idMso="ParagraphDialog" visible="false"/>
+		  <control idMso="BulletsGallery" visible="false"/>
+		  <control idMso="BulletsAndNumberingBulletsDialog" visible="false"/>
+		  <control idMso="NumberingGallery" visible="false"/>
+		  <control idMso="BulletsAndNumberingNumberingDialog" visible="false"/>
+		  <control idMso="ConvertToSmartArt" visible="false"/>
+		  <control idMso="ConvertToSmartArtMoreSmartArtGraphicsDialog" visible="false"/>
+		  <control idMso="ImeReconvert" visible="false"/>
+		  <control idMso="HyperlinkInsertPowerPoint" visible="false"/>
+		  <control idMso="BooksheifDefine" visible="false"/>
+		  <control idMso="HyperlinkEdit" visible="false"/>
+		  <control idMso="HyperlinkOpen" visible="false"/>
+		  <control idMso="HyperlinkCopy" visible="false"/>
+		  <control idMso="HyperlinkRemove" visible="false"/>
+		  <control idMso="Insights" visible="false"/>
+		  <control idMso="FixSynonymChangeMenu" visible="false"/>
+		  <control idMso="Translate" visible="false"/>
+		  <control idMso="WordArtFormatDialog" visible="false"/>
+		  <control idMso="ObjectFormatDialog" visible="false"/>
+		  <control idMso="AdditionalActions" visible="false"/>
+		  <control idMso="SmartTagOptions" visible="false"/>
+		  <control idMso="FirstCorrectionAlternative" visible="false"/>
+	  </contextMenu>
+  </contextMenus>
+	
+ 
+</customUI>

@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NoteTakingAddIn.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="NO_NAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TOUCHUP_ATTRIBUTE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TOUCHUP_ATTRIBUTE</Value>
+    </Setting>
+    <Setting Name="DRAG_LINK" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DRAG_LINK</Value>
+    </Setting>
+    <Setting Name="ZindexForeground" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="ZindexBackground" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
